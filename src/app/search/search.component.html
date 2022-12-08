@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h1>Search Product</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="for-label">name</label>
+                    <input name="name"[(ngModel)]="name" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+                <div class="row mt-4">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">image</th>
+                        <th scope="col">category</th>
+                        <th scope="col">description</th>
+                        <th scope="col">price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let i of searchProduct">
+                        <th>{{i.image}}</th>
+                        <td>{{i.category}}</td>
+                        <td>{{i.description}}</td>
+                        <td>{{i.price}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+        </div>
+    </div>
+</div>
