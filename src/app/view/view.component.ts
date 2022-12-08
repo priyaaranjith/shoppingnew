@@ -7,13 +7,21 @@ import { ApiService } from '../api.service';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent {
-  constructor(private api:ApiService){
+  constructor(private api : ApiService)
+  {
     api.fetchProducts().subscribe(
-      (response)=>{
-        this.data=response;
+      (response)=> {
+        this.loading=false
+        this.products = response;
+
       }
     )
   }
-  data:any=[]
+
+
+  products:any 
+
+  loading : boolean =true
+
 
 }

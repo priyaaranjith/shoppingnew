@@ -10,11 +10,11 @@ export class ApiService {
 
   fetchProducts =()=>
   {
-    return this.http.get("")
+    return this.http.get("http://localhost:8080/view")
   }
 
-  addProducts =(dataToSend : any)=>
+  addProducts =(dataToSend:any)=>
   {
-    return this.http.post("")
+    return this.http.post("http://localhost:8080/add",dataToSend)
   }
 }

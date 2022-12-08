@@ -13,12 +13,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                  <tr *ngFor="let i of products">
+                    <th>{{i.name}}</th>
+                    <td>{{i.image}}</td>
+                    <td>{{i.category}}</td>
+                    <td>{{i.description}}</td>
+                    <td>{{i.price}}</td>
                   </tr>
                 </tbody>
               </table>

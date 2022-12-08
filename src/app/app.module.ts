@@ -11,6 +11,7 @@ import { UserloginComponent } from './userlogin/userlogin.component';
 import { AddComponent } from './add/add.component';
 import { ViewComponent } from './view/view.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const myRoute : Routes = [
   {
@@ -50,6 +51,7 @@ const myRoute : Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoute),
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
