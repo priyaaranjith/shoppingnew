@@ -7,6 +7,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UserregComponent } from './userreg/userreg.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
 
 const myRoute : Routes = [
   {
@@ -16,6 +17,10 @@ const myRoute : Routes = [
   {
     path : "userreg",
     component : UserregComponent
+  },
+  {
+    path : "userlogin",
+    component : UserloginComponent
   }
 ]
 
@@ -25,7 +30,8 @@ const myRoute : Routes = [
     AppComponent,
     AdminloginComponent,
     NavbarComponent,
-    UserregComponent
+    UserregComponent,
+    UserloginComponent
   ],
   imports: [
     BrowserModule,
